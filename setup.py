@@ -11,7 +11,9 @@ root_path = pathlib.Path(__file__).parent
 version = setup_utils.import_module_from_path(root_path / 'mlds' / 'version.py')
 
 # Import required packages
-required_pkgs = (root_path / 'requirements.txt').read_text().splitlines()
+install_requires = (root_path / 'requirements.txt').read_text().splitlines()
+test_requires = (root_path / 'requirements-dev.txt').read_text().splitlines()
+test_requires = test_requires[1:]  # Strip the first `-r requirements.txt` line
 
 setuptools.setup(
     # ----- Base -----
@@ -20,7 +22,10 @@ setuptools.setup(
 
     # ----- Code -----
     packages=setuptools.find_namespace_packages(include=["mlds.*"]),
-    install_requires=required_pkgs,
+    install_requires=install_requires,
+    extras_require={
+        'test': test_requires,
+    },
     package_data={},
 
     # ----- PyPI metadata -----

@@ -1,13 +1,13 @@
 {
-  "editor.rulers": [80],
-  "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "python.testing.pytestArgs": [
-    "mlds"
-  ],
   "python.testing.unittestEnabled": false,
   "python.testing.nosetestsEnabled": false,
   "python.testing.pytestEnabled": true,
-  "python.linting.pylintUseMinimalCheckers": false
+  "python.linting.pylintUseMinimalCheckers": false,
+  "[python]": {
+    "editor.rulers": [80],
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+  }
 }
