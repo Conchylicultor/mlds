@@ -1,3 +1,12 @@
 """Version."""
+"""
+import importlib.metadata
 
-__version__ = '1.0.0'
+try:
+  __version__ = importlib.metadata.version(__name__)
+except importlib.metadata.PackageNotFoundError:
+  # package is not installed
+  __version__ = ''  # Local developpement
+"""
+
+__version__ = ''  # Local developpement

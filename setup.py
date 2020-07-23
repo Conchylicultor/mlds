@@ -11,9 +11,10 @@ root_path = pathlib.Path(__file__).parent
 version = setup_utils.import_module_from_path(root_path / 'mlds' / 'version.py')
 
 # Import required packages
-install_requires = (root_path / 'requirements.txt').read_text().splitlines()
-test_requires = (root_path / 'requirements-dev.txt').read_text().splitlines()
-test_requires = test_requires[1:]  # Strip the first `-r requirements.txt` line
+install_requires = setup_utils.load_requirements(root_path / 'requirements.txt')
+test_requires = setup_utils.load_requirements(
+    root_path / 'requirements-dev.txt'
+)
 
 setuptools.setup(
     # ----- Base -----

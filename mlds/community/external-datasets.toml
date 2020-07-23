@@ -1,0 +1,3 @@
+[Namespaces]
+tensorflow_graphics = '/tensorflow/graphics/tree/master/tensorflow_graphics/datasets'
+t5 = '/google-research/text-to-text-transfer-transformer/tree/master/t5/data'

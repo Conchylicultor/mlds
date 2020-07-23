@@ -1,0 +1,7 @@
+[style]
+based_on_style = google
+indent_width = 2
+coalesce_brackets = True
+dedent_closing_brackets = True
+split_before_dot = True
+split_penalty_after_opening_bracket = 1000

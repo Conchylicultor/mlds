@@ -1,6 +1,11 @@
 {
   "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    ".pylintrc": "ini",
+    ".style.yapf": "ini",
+  },
   "python.testing.unittestEnabled": false,
   "python.testing.nosetestsEnabled": false,
   "python.testing.pytestEnabled": true,
@@ -9,5 +14,11 @@
     "editor.rulers": [80],
     "editor.tabSize": 2,
     "editor.detectIndentation": false,
-  }
+  },
+  "python.formatting.provider": "yapf",
+  "python.testing.pytestArgs": [
+    "mlds",
+    "-vv",
+  ],
+  "python.pythonPath": "/usr/bin/python3"
 }
